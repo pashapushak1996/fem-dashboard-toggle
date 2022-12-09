@@ -73,20 +73,21 @@ blockquote, q {
   --clr-dark-text-primary: hsl(228, 34%, 66%);
   --clr-dark-text-secondary: hsl(0, 0%, 100%);
   /* || Light theme mode */
+  --clr-light-toggle-bg: hsl(230, 22%, 74%);
   --clr-light-toggle-btn: hsl(228, 46%, 96%);
-  --clr-toogle-bg: hsl(230, 22%, 74%);
-  --clr-toggle-btn: hsl(228, 46%, 96%);
   --clr-light-bg: hsl(0, 0%, 100%);
   --clr-light-top-bg: hsl(225, 100%, 98%);
   --clr-light-card: hsl(227, 47%, 96%);
   --clr-light-card-hover: hsl(228, 33%, 91%);
   --clr-light-text-primary: hsl(228, 12%, 44%);
   --clr-light-text-secondary: hsl(230, 17%, 14%);
-  --clr-body: var(--clr-light-bg);
+  --clr-body-bg: var(--clr-light-bg);
   --clr-text-primary: var(--clr-light-text-primary);
   --clr-secondary-primary: var(--clr-light-text-secondary);
-  --clr-card-bg: var(--clr-light-card);
+  --clr-card: var(--clr-light-card);
   --clr-card-hover: var(--clr-light-card-hover);
+  --clr-toggle: var(--clr-light-toggle-bg);
+  --clr-toggle-btn: var(--clr-light-toggle-btn);
   /* || Fonts */
   --ff-primary: "Inter", sans-serif;
   /* || Font-sizes */
@@ -99,6 +100,16 @@ blockquote, q {
   /* || Font-weights */
   --fw-regular: 400;
   --fw-bold: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-body-bg: var(--clr-dark-bg);
+    --clr-text-primary: var(--clr-dark-text-primary);
+    --clr-text-secondary: var(--clr-dark-text-secondary);
+    --clr-card: var(--clr-dark-card);
+    --clr-card-hover: var(--clr-dark-card-hover);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
