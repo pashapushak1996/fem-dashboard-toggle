@@ -1,0 +1,9 @@
+@use "../utils/functions" as *;
+
+
+.container {
+  --padding: 3.125rem;
+  max-width: min(calc(100% - var(--padding)), rem(1100));
+  margin-inline: auto;
+}
+

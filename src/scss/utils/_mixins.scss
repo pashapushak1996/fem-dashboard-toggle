@@ -23,3 +23,12 @@ $breakpoints-down: (
     @content;
   }
 }
+
+
+/* Flex */
+
+@mixin flex-c($direction:row) {
+  display: flex;
+  align-items: center;
+  flex-direction: $direction;
+}

@@ -14,10 +14,22 @@
   }
 }
 
+body {
+  --clr-body-bg: var(--clr-light-bg);
+  --clr-header-bg: var(--clr-light-top-bg);
+  --clr-text-primary: var(--clr-light-text-primary);
+  --clr-text-secondary: var(--clr-light-text-secondary);
+  --clr-card: var(--clr-light-card);
+  --clr-card-hover: var(--clr-light-card-hover);
+  --clr-toggle: var(--clr-light-toggle-bg);
+  --clr-toggle-btn: var(--clr-light-bg);
+}
+
 body.light {
   --clr-body-bg: var(--clr-light-bg);
+  --clr-header-bg: var(--clr-light-top-bg);
   --clr-text-primary: var(--clr-light-text-primary);
-  --clr-secondary-primary: var(--clr-light-text-secondary);
+  --clr-text-secondary: var(--clr-light-text-secondary);
   --clr-card: var(--clr-light-card);
   --clr-card-hover: var(--clr-light-card-hover);
   --clr-toggle: var(--clr-light-toggle-bg);
@@ -26,6 +38,7 @@ body.light {
 
 body.dark {
   --clr-body-bg: var(--clr-dark-bg);
+  --clr-header-bg: var(--clr-dark-top-bg);
   --clr-text-primary: var(--clr-dark-text-primary);
   --clr-text-secondary: var(--clr-dark-text-secondary);
   --clr-card: var(--clr-dark-card);
