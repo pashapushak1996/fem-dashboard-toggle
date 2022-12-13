@@ -65,7 +65,7 @@ blockquote, q {
   --toggle-bg-start: hsl(210, 78%, 56%);
   --toggle-bg-end: hsl(146, 68%, 55%);
   /* || Dark theme mode */
-  --clr-dark-toggle-btn: hsl(230, 22%, 74%);
+  --clr-dark-toggle-btn: var(--clr-dark-bg);
   --clr-dark-bg: hsl(230, 17%, 14%);
   --clr-dark-top-bg: hsl(232, 19%, 15%);
   --clr-dark-card: hsl(228, 28%, 20%);
@@ -86,7 +86,7 @@ blockquote, q {
   --clr-secondary-primary: var(--clr-light-text-secondary);
   --clr-card: var(--clr-light-card);
   --clr-card-hover: var(--clr-light-card-hover);
-  --clr-toggle: var(--clr-light-toggle-bg);
+  --clr-toggle-bg: var(--clr-light-toggle-bg);
   --clr-toggle-btn: var(--clr-light-toggle-btn);
   /* || Fonts */
   --ff-primary: "Inter", sans-serif;
@@ -154,7 +154,7 @@ body.light {
   --clr-text-secondary: var(--clr-light-text-secondary);
   --clr-card: var(--clr-light-card);
   --clr-card-hover: var(--clr-light-card-hover);
-  --clr-toggle: var(--clr-light-toggle-bg);
+  --clr-toggle-bg: var(--clr-light-toggle-bg);
   --clr-toggle-btn: var(--clr-light-bg);
 }
 
@@ -170,7 +170,7 @@ body.dark {
                   var(--toggle-bg-end) 0%,
                   var(--toggle-bg-start) 98.02%
   );
-  --clr-toggle-btn: var(--clr-light-toggle-btn);
+  --clr-toggle-btn: var(--clr-dark-toggle-btn);
 }
 
 .container {
@@ -180,6 +180,52 @@ body.dark {
 }
 
 /* Flex */
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.toggle__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background: var(--clr-toggle-bg);
+  border-radius: 1.25rem;
+}
+.toggle__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translate(0, -50%);
+  width: 22px;
+  height: 22px;
+  background-color: var(--clr-toggle-btn);
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+.toggle__wrapper:has(#dark:checked)::after {
+  transform: translate(0, -50%);
+}
+.toggle__wrapper:has(#light:checked)::after {
+  transform: translate(24px, -50%);
+}
+.toggle__label {
+  font-weight: var(--fw-bold);
+}
+
+.toggle__radio-btn {
+  flex: 1 auto;
+  height: 100%;
+  appearance: none;
+  cursor: pointer;
+}
+
 .header {
   position: relative;
   padding: 2.5rem 0;
@@ -204,6 +250,7 @@ body.dark {
 .header .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -213,12 +260,10 @@ body.dark {
     align-items: flex-start;
   }
 }
-.header__logo {
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.25rem;
-}
 @media (max-width: 39.9375em) {
   .header__logo {
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
     width: 100%;
     border-bottom: 1px solid var(--clr-text-primary);
   }

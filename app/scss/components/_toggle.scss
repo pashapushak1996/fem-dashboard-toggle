@@ -1,0 +1,63 @@
+@use "../utils" as *;
+
+.toggle {
+  @include flex-container();
+  gap: 1rem;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    width: 50px;
+    height: 26px;
+
+    background: var(--clr-toggle-bg);
+    border-radius: rem(20);
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 2px;
+
+      transform: translate(0, -50%);
+
+      width: 22px;
+      height: 22px;
+
+      background-color: var(--clr-toggle-btn);
+      border-radius: 50%;
+
+      transition: transform 0.2s linear;
+    }
+
+    &:has(#dark:checked) {
+      &::after {
+        transform: translate(0, -50%,);
+      }
+    }
+
+    &:has(#light:checked) {
+      &::after {
+        transform: translate(24px, -50%);
+      }
+    }
+  }
+
+
+  &__label {
+    font-weight: var(--fw-bold);
+  }
+}
+
+
+.toggle__radio-btn {
+  flex: 1 auto;
+  height: 100%;
+
+  appearance: none;
+  cursor: pointer;
+}

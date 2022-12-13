@@ -29,7 +29,7 @@
   }
 
   .container {
-    @include flex-c();
+    @include flex-container();
     justify-content: space-between;
 
     @include breakpoint-down(small) {
@@ -39,11 +39,12 @@
   }
 
   &__logo {
-    padding-bottom: rem(20);
-    margin-bottom: rem(20);
-
     @include breakpoint-down(small) {
+      padding-bottom: rem(20);
+      margin-bottom: rem(20);
+
       width: 100%;
+
       border-bottom: 1px solid var(--clr-text-primary);
     }
 
@@ -63,3 +64,5 @@
     font-weight: var(--fw-bold);
   }
 }
+
+

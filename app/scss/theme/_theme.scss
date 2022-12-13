@@ -9,7 +9,7 @@
                     225deg,
                     var(--toggle-bg-end) 0%,
                     var(--toggle-bg-start) 98.02%
-    );;
+    );
     --clr-toggle-btn: var(--clr-light-toggle-btn);
   }
 }
@@ -32,7 +32,7 @@ body.light {
   --clr-text-secondary: var(--clr-light-text-secondary);
   --clr-card: var(--clr-light-card);
   --clr-card-hover: var(--clr-light-card-hover);
-  --clr-toggle: var(--clr-light-toggle-bg);
+  --clr-toggle-bg: var(--clr-light-toggle-bg);
   --clr-toggle-btn: var(--clr-light-bg);
 }
 
@@ -48,5 +48,5 @@ body.dark {
                   var(--toggle-bg-end) 0%,
                   var(--toggle-bg-start) 98.02%
   );;
-  --clr-toggle-btn: var(--clr-light-toggle-btn);
+  --clr-toggle-btn: var(--clr-dark-toggle-btn);
 }

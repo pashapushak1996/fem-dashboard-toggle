@@ -14,7 +14,7 @@
   --toggle-bg-end: hsl(146, 68%, 55%);
 
   /* || Dark theme mode */
-  --clr-dark-toggle-btn: hsl(230, 22%, 74%);
+  --clr-dark-toggle-btn: var(--clr-dark-bg);
 
   --clr-dark-bg: hsl(230, 17%, 14%);
   --clr-dark-top-bg: hsl(232, 19%, 15%);
@@ -41,7 +41,7 @@
   --clr-secondary-primary: var(--clr-light-text-secondary);
   --clr-card: var(--clr-light-card);
   --clr-card-hover: var(--clr-light-card-hover);
-  --clr-toggle: var(--clr-light-toggle-bg);
+  --clr-toggle-bg: var(--clr-light-toggle-bg);
   --clr-toggle-btn: var(--clr-light-toggle-btn);
 
   /* || Fonts */
