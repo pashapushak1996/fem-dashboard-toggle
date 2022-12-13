@@ -4,6 +4,11 @@
   @include flex-container();
   gap: 1rem;
 
+  @include breakpoint-down(small) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;

@@ -38,7 +38,7 @@
 
   --clr-body-bg: var(--clr-light-bg);
   --clr-text-primary: var(--clr-light-text-primary);
-  --clr-secondary-primary: var(--clr-light-text-secondary);
+  --clr-text-secondary: var(--clr-light-text-secondary);
   --clr-card: var(--clr-light-card);
   --clr-card-hover: var(--clr-light-card-hover);
   --clr-toggle-bg: var(--clr-light-toggle-bg);
@@ -49,10 +49,11 @@
   --ff-primary: 'Inter', sans-serif;
 
   /* || Font-sizes */
-
+  --fs-12: 0.75rem; /* 12px */
   --fs-14: 0.875rem; /* 14px */
   --fs-20: 1.25rem; /* 20px */
   --fs-24: 1.5rem; /* 24px */
+  --fs-44: 2.75rem; /* 44px */
 
   /* || Font-weights */
 
