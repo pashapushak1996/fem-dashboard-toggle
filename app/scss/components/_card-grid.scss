@@ -1,0 +1,54 @@
+@use '../utils' as *;
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  row-gap: rem(30);
+
+  padding: rem(25);
+
+  background-color: var(--clr-card);
+
+  &:hover {
+    background-color: var(--clr-card-hover);
+  }
+
+  &__title {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-bold);
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+
+    margin-left: auto;
+  }
+
+  &__count {
+    font-size: var(--fs-24);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-secondary);
+  }
+
+  &__change {
+    @include flex-container();
+    gap: rem(3);
+
+    margin-left: auto;
+  }
+
+  &__change--up {
+    color: var(--clr-limegreen);
+  }
+
+  &__change--down {
+    color: var(--clr-brightred);
+  }
+
+  &__number {
+    font-size: var(--fs-12);
+  }
+}

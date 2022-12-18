@@ -1,16 +1,5 @@
 @use '../utils' as *;
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: rem(30);
-
-  @include breakpoint-down(small) {
-    grid-template-columns: repeat(1, 1fr);
-    gap: rem(24);
-  }
-}
-
 .card {
   position: relative;
 
@@ -22,6 +11,10 @@
 
   text-align: center;
   border-radius: 5px;
+
+  &:hover {
+    background-color: var(--clr-card-hover);
+  }
 
   &__platform {
     @include flex-container();
@@ -66,8 +59,17 @@
   &__change {
     @include flex-container();
     gap: rem(5);
+  }
 
+  &__change--up {
     color: var(--clr-limegreen);
+  }
+
+  &__change--down {
+    color: var(--clr-brightred);
+  }
+
+  &__number {
     font-weight: var(--fw-bold);
     font-size: var(--fs-12);
   }
