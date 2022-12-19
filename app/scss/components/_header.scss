@@ -7,6 +7,10 @@
 
   background-color: var(--clr-header-bg);
 
+  @include breakpoint-down(small) {
+    background-color: transparent;
+  }
+
   &::after {
     content: '';
 

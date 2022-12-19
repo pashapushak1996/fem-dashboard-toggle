@@ -19,7 +19,7 @@ body {
   color: var(--clr-text-primary);
 }
 
-main > section:not(:last-child) {
+main > section {
   margin-bottom: rem(50);
 }
 
